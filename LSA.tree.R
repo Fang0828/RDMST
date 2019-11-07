@@ -778,7 +778,7 @@ if (!is.null(allsig)){
   tab=table(as.character(allsig$cell))
   index=match(nodes$id,names(tab))
   nodes$size[!is.na(index)]=nodes$size[!is.na(index)]*tab[index[!is.na(index)]]/5
-  node$size[node$size<=5]=5
+  nodes$size[nodes$size<=5]=5
   nodes$color="gray"
   nodes$color[!is.na(index)]=rainbow(length(unique(allsig$cell)))
   annotation=c()
