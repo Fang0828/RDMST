@@ -39,7 +39,7 @@ Options:
                         the output path.
   -D DATATYPE, --DATATYPE=DATATYPE     the input file type either D (scDNA-seq) or R (scRNA-seq)
   -W WINDOWS, --WINDOWS=WINDOWS
-                        The size of smoothing windows when you input file which is from scRNA-seq.
+                        The size of smoothing windows if your inputfile is from scRNA-seq.
                         The value is the number of genes which will be merge. Default value is 30.
 
 
@@ -74,7 +74,7 @@ Run RDMST package
 ============
 
     Python scTree.py [-O <output path>] [-W <smoothing window size>] –P <RDMST package path> –I <input file> -D <input file type>
-    [...] contains optional parameters. The mandatory arguments are -P, -I and -D. The input file type includes D and R.
+    [...] contains optional parameters. The mandatory arguments are -P, -I and -D. The input file type is either "D" or "R".
 By default, -W is 30, which defines the smoothing window as 30 adjacent gene.
 
 
@@ -84,26 +84,31 @@ Try RDMST in the package directory on the different example datasets
 
 **Example 1: Input from scDNA-seq data**
 
-	python scTree.py -P ./ -I scDNA.CNV.txt -D D -O ../output
+	python scTree.py -P ./ -I ./example/scDNA.CNV.txt -D D -O ./example/output
 
 **Example 2: Input from scRNA-seq data**
 
-	python scTree.py -P ./ -I scDNA.CNV.txt -D R -O ../output1 -W 50
+	python scTree.py -P ./ -I ./example/scRNA.inferCNV.txt -D R -O ./example/output1 -W 30
 
 
 Output files
 ============
 
-There are three files:
+Three text files:
 
 	(1) CNV.tree.txt file: an rooted directed tree and the visualization of the tree
 
-	(2) segmental.LSA.txt file: identified significant lineage-specific CNAs at segment level
+	(2) segmental.LSA.txt file: significant lineage-specific CNAs at segment level
 
-	(3) gene.LSA.txt file: identified significant lineage-secific CNAs at gene level. RDMST includes
+	(3) gene.LSA.txt file: significant lineage-secific CNAs at gene level. RDMST includes
                           more than 400 cancer associated genes which are from 11 oncigenic pathways:
                           DDR, Notch, PI3K, Hippo, RTK/RAS, MYC, p53, Nrf2, TGFB, Wnt and cellcycle.
 
+Two figures:
+
+	(1) singlecell.tree.pdf: the RDMST of cells visualized by igraph
+
+	(2) LSA.tree.pdf: the RDMST of lineage-specific CNAs visualized by igraph
 
 
 Developer
