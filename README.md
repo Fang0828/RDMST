@@ -7,7 +7,7 @@ This package is to infer evolutionary tree of tumor cells thourgh integer copy n
 
 System requirements and dependency
 ==================================
-This package runs on a x86_64 Linux system, Python 2.7.
+This package runs on Python 2.7.
 
 It also requires R 3.5
 to run and has dependency on the R packages:
