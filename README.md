@@ -20,8 +20,8 @@ Installation
 ============
 Please download and copy the distribution to your specific location. If you are cloning from github, ensure that you have git-lfs installed.
 
-For example, if the downloaded distribuition is ******.tar.gz.
-	Type 'tar zxvf ******.tar.gz'
+For example, if the downloaded distribuition is RDMST.tar.gz.
+	Type 'tar zxvf RDMST.tar.gz'
 
 Then, run scTree.py in the resulting folder.
 
