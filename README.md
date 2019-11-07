@@ -12,7 +12,7 @@ This package runs on a x86_64 Linux system, Python 2.7.
 It also requires R (version >= 3.5)
 to run and has dependency on the R packages:
 
-	compynumber, igraph and DescTools.
+	igraph, HelloRanger and DescTools.
 
 
 
