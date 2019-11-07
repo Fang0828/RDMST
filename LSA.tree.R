@@ -639,7 +639,9 @@ geneCNAfunction<-function(k,pathwaygene,ancestorCNV,generegion){
   }
 }
 
-
+r = getOption("repos")
+r["CRAN"] = "http://cran.us.r-project.org"
+options(repos = r)
 if (!"HelloRanges" %in% installed.packages()){
   if (!requireNamespace("BiocManager", quietly = TRUE))
     install.packages("BiocManager")
